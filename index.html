@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="November 2026 participant toolkit for AI-supported interactive learning design, human review, and SCORM deployment" name="description"/><title>Toolkit for Learning Design: From Prompt to Practice | UF Symposium</title><style>
+:root{--navy:#172B3A;--teal:#175B63;--plum:#734B82;--copper:#A94F37;--ivory:#F7F5F0;--pale:#DCECEF;--lav:#EEE5F3;--line:#c5cfd1}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ivory);color:var(--navy);font:17px/1.55 system-ui,-apple-system,Segoe UI,sans-serif}a{color:var(--teal)}a:hover{text-decoration-thickness:2px}a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid var(--copper);outline-offset:3px}button{font:inherit;border:0;border-radius:10px;cursor:pointer;padding:.7rem 1rem;background:var(--teal);color:white;font-weight:650}button:hover{filter:brightness(1.12)}button.secondary{color:var(--teal);background:white;border:2px solid var(--teal)}button:disabled{opacity:.55;cursor:not-allowed}.skip{position:absolute;left:-9999px;top:0;background:white;padding:.5rem}.skip:focus{left:1rem;top:1rem;z-index:100}.shell{max-width:1100px;margin:auto;padding:0 22px}.top{background:var(--navy);color:white}.top .shell{padding:24px 22px 30px}.eyebrow{letter-spacing:.12em;text-transform:uppercase;font-weight:750;font-size:.78rem;color:#b9dfe2}.top h1{margin:8px 0 4px;font-size:clamp(2rem,5vw,3.35rem);line-height:1.1}.top p{max-width:780px;margin:12px 0 0;color:#e3edf0}.nav{background:#fff;border-bottom:1px solid var(--line)}.nav .shell{display:flex;gap:7px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}.nav a{padding:9px 13px;border-radius:8px;text-decoration:none;font-weight:650}.nav a:hover,.nav a:focus-visible{background:var(--pale)}main{padding:12px 0 45px}section{scroll-margin-top:16px;margin-top:28px}h2{font-size:1.75rem;margin:0 0 12px}h3{margin:0 0 8px;font-size:1.17rem}p{margin:.35rem 0 1rem}.lede{font-size:1.09rem;max-width:900px}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.two{grid-template-columns:repeat(2,minmax(0,1fr))}.card{background:white;border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:0 2px 8px #172b3a08}.card p:last-child{margin-bottom:0}.kicker{font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;font-weight:800;color:var(--teal)}.pill{display:inline-block;background:var(--pale);padding:4px 11px;border-radius:999px;font-weight:700;font-size:.85rem}.note{border-left:5px solid var(--copper);padding:12px 15px;background:#f7e8df;border-radius:0 10px 10px 0}.prompt{white-space:pre-wrap;overflow-wrap:anywhere;background:#f1f6f6;border:1px solid #bdd3d6;border-radius:12px;padding:18px;font:inherit;font-size:.98rem}.row{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.stack{display:grid;gap:15px}details{background:white;border:1px solid var(--line);border-radius:12px;padding:13px 17px}summary{cursor:pointer;font-weight:750;color:var(--teal)}.strategy-card{border-top:6px solid var(--teal)}.strategy-card:nth-child(2){border-top-color:var(--plum)}.strategy-card:nth-child(3){border-top-color:var(--copper)}.small{color:#385365;font-size:.9rem}.task{display:flex;align-items:flex-start;gap:12px;padding:12px 4px;border-bottom:1px solid #e1e5e5}.task input{accent-color:var(--teal);width:21px;height:21px;margin:3px 0;flex:none}.progress{height:14px;background:#dbe6e6;border-radius:99px;overflow:hidden}.progress>div{width:0;height:100%;background:var(--teal);transition:width .2s}.resources a{display:inline-block;margin-top:5px}.footer{background:var(--navy);color:white;padding:26px 0}.footer p{margin:0}.choices{display:grid;gap:8px;margin:12px 0}.choice{display:flex;align-items:flex-start;gap:12px;border:2px solid #cedadb;border-radius:10px;padding:13px;background:white;cursor:pointer}.choice:has(input:checked){border-color:var(--teal);background:#e6f3f2}.choice input{margin-top:5px;accent-color:var(--teal)}.feedback{padding:14px;border-radius:10px;background:#e6f3f2;border-left:5px solid var(--teal);margin:12px 0}.feedback[hidden]{display:none}.screen-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}.tag{color:var(--plum);font-weight:750}.resource-item{border-bottom:1px solid #e0e8e9;padding:12px 0}.resource-item:last-child{border:0}@media(max-width:740px){.cards,.two{grid-template-columns:1fr}.top .shell{padding:23px 18px}.shell{padding-left:16px;padding-right:16px}.nav a{font-size:.92rem}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.progress>div{transition:none}}
+
+/* Layout and accessibility refinements, November 2026 */
+:root { --line:#b5c5c9; --focus:#A94F37; }
+body { line-height:1.62; }
+.shell { max-width:1120px; padding-inline:clamp(18px,3vw,36px); }
+.top .shell { padding-block:clamp(28px,4vw,52px); }
+.top h1 { font-size:clamp(2.1rem,4.1vw,3.4rem); max-width:880px; line-height:1.15; }
+.hero-actions {display:flex; flex-wrap:wrap; gap:14px; margin-top:26px; align-items:stretch;}
+.hero-btn {display:inline-flex; justify-content:center; align-items:center; gap:6px; border:2px solid #dcecef; border-radius:12px; padding:13px 19px; font-weight:750; min-height:50px; text-decoration:none; line-height:1.4;}
+.hero-primary {background:#e6f3f2;color:#124950;}
+.hero-outline {background:transparent;color:#fff;}
+.hero-btn:hover {text-decoration:underline;text-decoration-thickness:2px;}
+.new-tab {font-size:.82em;font-weight:500;}
+.nav .shell {gap:8px 12px; padding-block:12px;}
+.nav a {line-height:1.45; padding:10px 12px; display:inline-flex; align-items:center; min-height:44px;}
+.nav .nav-featured {background:#e6f3f2; color:#124950;}
+main {padding-block:18px 60px;}
+section {margin-top:clamp(34px,5vw,56px); scroll-margin-top:18px;}
+section > h2 {font-size:clamp(1.55rem,3vw,2.0rem); line-height:1.25; margin-bottom:14px;}
+h3 {line-height:1.35; font-size:1.2rem;}
+.card {padding:clamp(20px,2.7vw,28px); min-width:0;}
+.cards {gap:18px;}
+.card .row {gap:16px 22px; align-items:flex-start;}
+.card .row > h3 {flex:1 1 240px; margin-block:5px;}
+.card .row > div {min-width:0; flex:1 1 260px;}
+.card .row > button,.card .row > a,.card-actions > button {max-width:100%; flex:0 0 auto;}
+button,.pill {line-height:1.45;}
+button {min-height:46px; padding:11px 18px; white-space:normal; text-align:center;}
+a.pill {display:inline-flex;align-items:center; justify-content:center; min-height:46px; padding:10px 17px; line-height:1.45; text-align:center; background:var(--pale); color:#124950; text-decoration:underline; text-underline-offset:3px; overflow-wrap:anywhere;}
+a.pill:hover {background:#cae5e7;}
+.prompt {margin-top:16px; line-height:1.65;}
+.note {margin-block:20px; padding:17px 21px; line-height:1.65;}
+details {padding:18px 22px; margin-top:18px;}
+summary {padding-block:4px;}
+.task {padding:15px 8px; line-height:1.58;}
+.task strong {font-size:1.02rem;}
+.check-fieldset {border:0;padding:0;margin:10px 0 0;min-width:0;}
+.card-actions {display:flex; justify-content:flex-start; align-items:center; flex-wrap:wrap; gap:14px; padding-top:24px;}
+.evidence-intro {border-left:5px solid var(--teal); background:#eaf3f3; margin-block:18px;}
+.evidence-card {margin-block:18px;}
+.evidence-card .progress {margin:14px 0;}
+.research-links {padding-left:1.5rem;}
+.research-links li {margin-bottom:12px;}
+.footer-links {margin-top:15px !important; display:flex; flex-wrap:wrap; gap:12px;}
+.footer-links a {color:#e6f3f2; text-underline-offset:3px;}
+:focus-visible {outline:3px solid var(--focus) !important; outline-offset:4px !important;}
+@media (max-width:740px){
+ .cards,.two {grid-template-columns:minmax(0,1fr)}
+ .card {padding:20px;}
+ .card .row {align-items:stretch;}
+ .card .row > button, .card .row > a {width:100%;}
+ .hero-btn {width:100%;}
+ .card-actions button {flex:1 1 100%;}
+}
+
+/* November 2026: side navigation with accessible mobile disclosure */
+.workspace{max-width:1500px;margin:0 auto;display:grid;grid-template-columns:minmax(230px,278px) minmax(0,1fr);gap:clamp(20px,3vw,44px);padding:0 clamp(16px,3vw,42px);align-items:start}
+.workspace .nav{position:sticky;top:18px;margin-top:26px;border:1px solid var(--line);border-radius:16px;background:#fff;max-height:calc(100vh - 36px);overflow:auto;box-shadow:0 2px 12px #172b3a0b}
+.nav .sidebar-links{display:flex;flex-direction:column;align-items:stretch;gap:5px;padding:17px!important}
+.nav .sidebar-links a{display:flex;padding:11px 15px;line-height:1.42;font-size:.96rem;border-radius:9px;overflow-wrap:anywhere;min-height:46px;color:var(--navy)}
+.nav .sidebar-links a:hover,.nav .sidebar-links a:focus-visible{background:#e7f2f3}
+.nav .sidebar-links a[aria-current="location"]{background:#dcecef;color:#124950;border-left:4px solid #175B63}
+.workspace main.shell{width:100%;max-width:none;padding-inline:0;min-width:0;padding-top:0}
+.workspace section:first-child{margin-top:30px}
+.mobile-nav-toggle{display:none}
+.scorm-steps .card{min-width:0}
+.resource-list{padding-left:1.35rem}.resource-list li{margin:.55rem 0}
+#scorm code{overflow-wrap:anywhere}
+@media(max-width:900px){
+ .workspace{display:block;padding-inline:clamp(16px,4vw,28px)}
+ .workspace .nav{position:relative;top:auto;margin-top:18px;max-height:none;overflow:visible}
+ .mobile-nav-toggle{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;background:#fff;color:var(--navy);padding:15px 18px;border-radius:14px;text-align:left}
+ .mobile-nav-toggle:hover{background:#e7f2f3;filter:none}
+ .nav .sidebar-links{display:none}
+ .nav.is-open .sidebar-links{display:flex;border-top:1px solid var(--line)}
+ .workspace main.shell{padding-block:8px 45px}
+ .workspace section:first-child{margin-top:22px}
+}
+@media(max-width:490px){.scorm-steps{grid-template-columns:1fr}}
+</style></head><body><a class="skip" href="#main">Skip to main content</a><header class="top"><div class="shell"><div class="eyebrow">UF Instructional Design Symposium • November 2026</div><h1>Toolkit for Learning Design</h1><p>From Prompt to Practice · A human-centered AI toolkit for instructional designers, e-Learning Specialists and Ed Tech staff.</p><div aria-label="Workshop links" class="hero-actions"><a class="hero-btn hero-primary" href="https://view.genially.com/6aeb46084af174cc499a801d" rel="noopener noreferrer" target="_blank">View symposium presentation <span class="new-tab">(opens in new tab)</span></a><a class="hero-btn hero-outline" href="https://ajmacadangdang.github.io/sample/" rel="noopener noreferrer" target="_blank">Explore live sample activity <span class="new-tab">(opens in new tab)</span></a></div></div></header><div class="workspace"><nav aria-label="Toolkit sections" class="nav" id="site-navigation"><button aria-controls="sidebar-links" aria-expanded="false" class="mobile-nav-toggle" type="button">Explore toolkit sections <span aria-hidden="true">☰</span></button><div class="sidebar-links" id="sidebar-links"><a href="#start">Start Here</a><a href="#prompts">Prompts</a><a href="#sample">Sample Activity</a><a href="#evidence">Learning Design Evidence</a><a href="#review">Review Checklist</a><a href="#extend">Keep Exploring</a><a href="#scorm">SCORM Packaging</a><a href="#accessibility">Accessibility Resources</a><a class="nav-featured" href="https://view.genially.com/6aeb46084af174cc499a801d" rel="noopener noreferrer" target="_blank">Presentation ↗</a></div></nav><main class="shell" id="main"><section id="start"><span class="pill">45-minute workshop</span><h2>Start here</h2><p class="lede">Imagine you've just delivered a faculty workshop on active learning. Your goal is to turn a static handout into a self-paced resource that faculty can explore whenever they need teaching ideas.</p><div class="cards"><div class="card"><span class="kicker">01 • Prompt</span><h3>Tell AI what to create</h3><p>Use the short <strong>Who, What, How, Requirements</strong> prompt below.</p></div><div class="card"><span class="kicker">02 • Explore</span><h3>Try the prototype</h3><p>Open the sample to see strategies, examples, decision-making, and reflection.</p></div><div class="card"><span class="kicker">03 • Improve</span><h3>Use human judgment</h3><p>Review one issue, refine it, test again, and prepare for faculty review.</p></div></div><p class="note" style="margin-top:16px"><strong>Your choice:</strong> You may follow the sample prompt, adapt it to a specific college or course, or create something entirely different. We will all use the same process: prompt, explore, and improve.</p><p class="note" style="margin-top:16px"><strong>Workshop fallback:</strong> If you reach a NaviGator usage limit or your code isn't complete, use the <a href="https://ajmacadangdang.github.io/sample/" rel="noopener noreferrer" target="_blank">live active-learning sample</a> to complete the review step.</p></section><section id="prompts"><h2>Copyable prompts</h2><p>Use the shared faculty handout example, or choose a different topic or prompt that is relevant to your work. The example is a starting point—not a requirement. If you use the guided prompt, replace the bracketed fields with a course, topic, or college.</p><div class="stack"><div class="card"><div class="row"><h3>Prompt 1 — Create the resource</h3><button onclick="copyText('main-prompt',this)" type="button">Copy prompt</button></div><div class="prompt" id="main-prompt">Act as an instructional designer and web developer.
+
+WHO: Faculty in [COLLEGE OR DISCIPLINE] teaching [COURSE OR TOPIC] in face-to-face or online settings.
+
+WHAT: Create a short, interactive faculty development handout featuring three active learning strategies: Think–Pair–Share, Case-Based Learning, and One-Minute Paper.
+
+HOW: For each strategy, include a simple explanation, a relevant teaching example, and a clickable tip or reflection question faculty can apply to their course.
+
+REQUIREMENTS: Make it clear, responsive, and accessible following applicable WCAG 2.1 Level AA criteria. Include readable text, sufficient contrast, and keyboard-operable interactions. Generate one standalone HTML file with embedded CSS and JavaScript, no external libraries. Explain how to save and open it. Flag items for faculty review and accessibility testing.</div><p class="small">Example WHO: Faculty in the College of Engineering teaching Introduction to Materials Science; or faculty in the College of Veterinary Medicine teaching Clinical Reasoning. Keep the example grounded in an actual course.</p></div><div class="card"><div class="row"><h3>Prompt 2 — Make one improvement</h3><button onclick="copyText('refine-prompt',this)" type="button">Copy prompt</button></div><div class="prompt" id="refine-prompt">Improve the interactive handout by [DESCRIBE ONE CHANGE]. Keep the existing content and working features. Explain what changed and return the complete updated HTML file. Identify what I should manually test before sharing.</div></div></div><div class="note" style="margin-top:16px"><strong>Reminder:</strong> Use approved tools and institutionally permitted information. Never input restricted student, faculty, patient, or other sensitive data without authorization.</div></section><section id="sample"><h2>Explore the sample activity</h2><p>Explore the live faculty-development resource hosted on GitHub Pages. It opens in a new tab and requires an internet connection.</p><div class="card"><div class="row"><div><h3>Small Changes, Active Learning</h3><p>Think–Pair–Share • Case-Based Learning • One-Minute Paper</p></div><a class="pill" href="https://ajmacadangdang.github.io/sample/" rel="noopener noreferrer" target="_blank">Open live interactive sample (new tab)</a></div><p>Explore three active-learning strategy cards, open practical teaching tips, and complete a personal implementation plan.</p><p class="small">Tip: After opening the sample, try using only your keyboard (Tab, Shift+Tab, Enter and Space).</p></div></section><section aria-labelledby="evidence-title" id="evidence">
+<h2 id="evidence-title">What makes interactive learning effective?</h2>
+<p class="lede">Interactivity matters when it helps learners <strong>think, practice, receive feedback, and apply what they learn</strong>—not simply click through content. Use these research-informed principles to review an AI-generated prototype.</p>
+<div class="card evidence-intro"><p><strong>For our faculty handout:</strong> Opening a strategy card helps faculty find information. Asking faculty to choose a strategy for a realistic teaching challenge, explain the choice, and receive feedback offers a richer opportunity to practice applying it.</p></div>
+<div class="card evidence-card">
+<div class="row"><div><h3>Interactive learning design checklist</h3><p class="small">Select each principle as you assess the activity. These checks support instructional review; they do not demonstrate learning outcomes by themselves.</p></div><strong aria-live="polite" id="evidence-progress">0 of 7 reviewed</strong></div>
+<div aria-label="Evidence-based design review progress" aria-valuemax="7" aria-valuemin="0" aria-valuenow="0" class="progress" id="evidence-progressbar" role="progressbar"><div id="evidence-fill"></div></div>
+<fieldset class="check-fieldset"><legend class="screen-only">Evidence-based interactive learning design criteria</legend>
+<label class="task"><input class="evidence-check" type="checkbox"/><span><strong>Purposeful</strong><br/>The interaction supports an intended learning outcome.</span></label>
+<label class="task"><input class="evidence-check" type="checkbox"/><span><strong>Cognitively active</strong><br/>Learners explain, decide, retrieve, apply, or justify—not just click.</span></label>
+<label class="task"><input class="evidence-check" type="checkbox"/><span><strong>Relevant</strong><br/>Scenarios and examples connect to authentic teaching or learning needs.</span></label>
+<label class="task"><input class="evidence-check" type="checkbox"/><span><strong>Feedback-rich</strong><br/>Feedback explains why, and learners can improve their response.</span></label>
+<label class="task"><input class="evidence-check" type="checkbox"/><span><strong>Focused</strong><br/>The layout minimizes distraction and unnecessary cognitive load.</span></label>
+<label class="task"><input class="evidence-check" type="checkbox"/><span><strong>Accessible</strong><br/>Content and interactions are usable with keyboard and assistive technology; accessibility testing is still required.</span></label>
+<label class="task"><input class="evidence-check" type="checkbox"/><span><strong>Evidence-informed</strong><br/>There is a plan to check understanding, retention, or transfer—not only clicks or completion.</span></label>
+</fieldset>
+<div class="card-actions"><button id="download-evidence" type="button">Download design review notes</button><button class="secondary" id="reset-evidence" type="button">Reset checklist</button></div>
+</div>
+<details><summary>Why these principles? Peer-reviewed research</summary>
+<p>These studies support cognitive engagement, active practice, useful feedback, manageable cognitive load, and retrieval practice. They do <strong>not</strong> establish that all interactive HTML activities improve learning.</p>
+<ul class="research-links">
+<li><strong>Chi &amp; Wylie (2014):</strong> cognitive engagement and the ICAP framework. <a href="https://doi.org/10.1080/00461520.2014.965823" rel="noopener noreferrer" target="_blank">Read the study (new tab)</a>.</li>
+<li><strong>Freeman et al. (2014):</strong> meta-analysis of active learning in undergraduate STEM courses. <a href="https://doi.org/10.1073/pnas.1319030111" rel="noopener noreferrer" target="_blank">Read the study (new tab)</a>.</li>
+<li><strong>Hattie &amp; Timperley (2007):</strong> principles of effective feedback. <a href="https://doi.org/10.3102/003465430298487" rel="noopener noreferrer" target="_blank">Read the study (new tab)</a>.</li>
+<li><strong>Mayer &amp; Moreno (2003):</strong> reducing cognitive overload in multimedia learning. <a href="https://doi.org/10.1207/S15326985EP3801_6" rel="noopener noreferrer" target="_blank">Read the study (new tab)</a>.</li>
+<li><strong>Dunlosky et al. (2013):</strong> practice testing and distributed practice. <a href="https://doi.org/10.1177/1529100612453266" rel="noopener noreferrer" target="_blank">Read the study (new tab)</a>.</li>
+</ul>
+</details>
+</section><section id="review"><h2>Review checklist</h2><p>Now check whether the prototype is accurate, accessible, usable, and ready for faculty review. This is a quick quality-assurance check, not a complete accessibility audit.</p><div class="card"><div class="row"><strong aria-live="polite" id="check-progress">0 of 6 reviewed</strong><button class="secondary" id="reset-review" type="button">Reset checklist</button></div><div aria-label="Review checklist progress" aria-valuemax="6" aria-valuemin="0" aria-valuenow="0" class="progress" id="progress-bar" role="progressbar" style="margin-top:12px"><div id="progress-fill"></div></div><label class="task"><input class="review-check" type="checkbox"/><span><strong>Purpose and accuracy</strong><br/>The strategies and examples are correct, useful, and aligned with the faculty audience.</span></label><label class="task"><input class="review-check" type="checkbox"/><span><strong>Meaningful interaction</strong><br/>Clicking or responding helps faculty understand and apply a strategy—not just reveal decoration.</span></label><label class="task"><input class="review-check" type="checkbox"/><span><strong>Keyboard operation</strong><br/>I can reach and operate the interactive elements using only a keyboard; focus is visible.</span></label><label class="task"><input class="review-check" type="checkbox"/><span><strong>Text and visual access</strong><br/>Headings are clear, text is readable, contrast is sufficient, and meaning is not communicated by color alone.</span></label><label class="task"><input class="review-check" type="checkbox"/><span><strong>Feedback and screen readers</strong><br/>Instructions and response feedback are clear; dynamic messages are announced appropriately.</span></label><label class="task"><input class="review-check" type="checkbox"/><span><strong>Faculty review and disclosure</strong><br/>A subject-matter expert has reviewed the content and the AI assistance is disclosed accurately.</span></label><div class="row" style="margin-top:16px"><button id="download-review" type="button">Download my review notes</button><span class="small">Checklist progress stays on this device while the page is open.</span></div></div></section><section id="extend">
+<h2>Keep exploring after the workshop</h2>
+<p class="lede">The faculty handout is only one starting point. Bring a real teaching challenge to a faculty subject-matter expert and create a resource that solves it. The strongest next project is not necessarily the most interactive—it is the one faculty and learners actually need.</p>
+<div class="cards">
+<div class="card"><span class="kicker">Use case 01</span><h3>Interactive study guide</h3><p>Work with a faculty member to identify topics students find difficult. Turn approved concepts into short practice questions, worked examples, and explanatory feedback.</p><p class="small"><strong>Faculty validates:</strong> key concepts, answer rationale, accuracy, and common misconceptions.</p></div>
+<div class="card"><span class="kicker">Use case 02</span><h3>Short self-paced module</h3><p>Co-design a concise module to introduce a concept, give learners practice, and check understanding at their own pace.</p><p class="small"><strong>Faculty validates:</strong> learning outcome, sequence, examples, and assessment decisions.</p></div>
+<div class="card"><span class="kicker">Use case 03</span><h3>Something else useful</h3><p>Create a case-based decision activity, quick reference tool, practice simulation, or faculty development resource based on the real learning need.</p><p class="small"><strong>Together decide:</strong> whether an interactive format is the right solution.</p></div>
+</div>
+<div class="card" style="margin-top:16px"><h3>A simple faculty + ID collaboration cycle</h3>
+<ol><li><strong>Listen:</strong> Ask faculty what learners struggle with and what success would look like.</li>
+<li><strong>Co-design:</strong> Agree on one learning outcome, source material, a small interaction, and the feedback learners need.</li>
+<li><strong>Prototype:</strong> Use NaviGator Chat to draft a small activity using only approved, non-sensitive materials.</li>
+<li><strong>Review together:</strong> Faculty checks disciplinary accuracy and authenticity; the instructional designer checks alignment, UX, and accessibility.</li>
+<li><strong>Test and refine:</strong> Check keyboard operation, content accuracy, and the learner experience; revise before deployment.</li>
+<li><strong>Share and learn:</strong> Publish through an approved channel, disclose AI assistance accurately, and collect useful feedback or learning evidence.</li></ol>
+</div>
+<div class="card" style="margin-top:16px"><div class="row"><h3>Optional next-project prompt</h3><button onclick="copyText('extension-prompt',this)" type="button">Copy prompt</button></div>
+<div class="prompt" id="extension-prompt">Act as an instructional designer collaborating with a faculty subject-matter expert.
+
+WHO: Students in [COLLEGE / COURSE] who struggle with [LEARNING CHALLENGE].
+WHAT: Draft a [STUDY GUIDE / SELF-PACED MODULE / INTERACTIVE CASE] to help learners [LEARNING OUTCOME].
+HOW: Use these faculty-approved concepts or examples: [INSERT APPROVED MATERIAL]. Include one meaningful practice activity and explanatory feedback.
+REQUIREMENTS: Create a short, accessible, keyboard-friendly standalone HTML prototype aligned with applicable WCAG 2.1 Level AA criteria. Use embedded CSS and JavaScript and no external libraries. Identify facts, answers, and accessibility features faculty and the ID must review before use.</div>
+<p class="small">Don't have approved content yet? Start with the learning outcome and an outline; collaborate with faculty before developing discipline-specific assessments. Never place restricted student, patient, or other protected information into AI tools without authorization.</p></div>
+<div class="note" style="margin-top:16px"><strong>Ready to go further?</strong> Add an authentic scenario, richer formative feedback, or a short pilot with faculty or learners. For LMS delivery, see the <a href="#scorm">SCORM packaging guide</a>. These are extensions—not requirements for the 45-minute workshop.</div>
+</section><section aria-labelledby="scorm-heading" id="scorm">
+<h2 id="scorm-heading">From HTML to SCORM in Canvas</h2>
+<p class="lede">Your standalone HTML prototype can become a SCORM learning resource when your LMS needs to launch the experience and, if appropriate, track completion or scores. SCORM is one option—not a requirement for every faculty handout.</p>
+<div class="note"><strong>Advanced AI models may generate a ready-to-upload SCORM ZIP file directly.</strong> That can save packaging steps, but it does not guarantee a valid package. Always inspect, validate, and test the ZIP in Canvas before sharing it with faculty or students.</div>
+<div class="cards two scorm-steps">
+<div class="card"><span class="kicker">01 • Prepare</span><h3>Start with working HTML</h3><p>Confirm that your interactive resource opens in a browser, uses approved content, and works with keyboard navigation. Decide whether you need ungraded access, completion tracking, or a score.</p></div>
+<div class="card"><span class="kicker">02 • Request</span><h3>Ask AI to create the SCORM files</h3><p>Use the prompt below. Ask for a downloadable SCORM 1.2 ZIP when the model supports file creation. Otherwise request every file and step-by-step packaging instructions.</p></div>
+<div class="card"><span class="kicker">03 • Package</span><h3>Check the ZIP structure</h3><p>A SCORM package needs an <code>imsmanifest.xml</code> at the ZIP root, a valid launch file, referenced assets, and runtime communication where tracking is required. Zip the <em>contents</em> of the package folder—not an extra parent folder.</p></div>
+<div class="card"><span class="kicker">04 • Upload and test</span><h3>Import into Canvas</h3><p>In a Canvas course with SCORM enabled, open SCORM, upload the ZIP, and choose the appropriate import type (such as a page or assignment). Launch it, test controls and accessibility, and verify any completion or score reporting.</p></div>
+</div>
+<div class="card" style="margin-top:20px"><div class="row"><h3>Copyable SCORM packaging prompt</h3><button onclick="copyText('scorm-prompt',this)" type="button">Copy SCORM prompt</button></div>
+<div class="prompt" id="scorm-prompt">Act as an instructional designer and SCORM developer. I have a working HTML learning activity and want to deploy it in Canvas.
+
+WHAT: Create a valid SCORM 1.2 package using my existing activity. Preserve its content, styling, interactions, and accessibility features.
+
+TRACKING: [Choose: ungraded resource / report completion / report score]. If tracking is needed, use the appropriate SCORM runtime calls and clearly explain the completion condition.
+
+OUTPUT: If you can create downloadable files, provide one ready-to-test SCORM ZIP. Otherwise, provide all required files (including imsmanifest.xml and any runtime JavaScript) plus clear Mac-friendly instructions for organizing the files and zipping them correctly.
+
+TESTING: Give me a short checklist to validate the ZIP, upload it through Canvas SCORM, check launch and navigation, and verify completion or scores. Do not claim the package works until it is tested in Canvas.</div>
+<p class="small">Before submitting the prompt, attach or paste your actual HTML and any supporting assets. Remove private, restricted, patient, or student data unless explicitly authorized for the tool.</p></div>
+<details><summary>How to ZIP the package on a Mac</summary><ol><li>Create a folder for the generated SCORM files and place <code>imsmanifest.xml</code>, the launch HTML file, scripts, and assets inside it.</li><li>Open the folder and confirm <code>imsmanifest.xml</code> is at the same level as the launch file, not nested in another folder.</li><li>Select the files and asset folders <strong>inside</strong> that folder, Control-click, and choose <strong>Compress</strong>.</li><li>Rename the resulting ZIP clearly, such as <code>active-learning-scorm12.zip</code>.</li><li>Open the ZIP to inspect its structure before uploading. Do not simply rename an ordinary HTML ZIP to SCORM.</li></ol></details>
+<div class="card" style="margin-top:18px"><h3>Canvas and SCORM references</h3><ul class="resource-list"><li><a href="https://community.instructure.com/en/kb/articles/660683-how-do-i-import-scorm-files-as-an-assignment" rel="noopener noreferrer" target="_blank">Canvas: Import SCORM as an assignment (new tab)</a></li><li><a href="https://community.instructure.com/en/kb/articles/660961-how-do-i-import-scorm-files-as-a-page" rel="noopener noreferrer" target="_blank">Canvas: Import SCORM as a page (new tab)</a></li><li><a href="https://scorm.com/scorm-explained/technical-scorm/scorm-12-overview-for-developers/" rel="noopener noreferrer" target="_blank">SCORM 1.2 developer overview (optional technical reference, new tab)</a></li></ul><p class="small">Canvas SCORM functionality depends on institutional configuration. SCORM pages may be suitable for reference content; graded assignments are more appropriate when tracking assessment results is intended. Test in a real supported course environment.</p></div>
+</section><section id="accessibility"><h2>Accessibility resources: start with UF</h2>
+<p class="lede">You do not need to become a WCAG specialist during this workshop. Start with these practical UF guides, try one quick check, and ask for support when you need it.</p>
+<div class="cards two resources">
+<div class="card"><span class="pill">Start here · 5 minutes</span><h3>UF CITT: Accessible Course Design</h3><p>Beginner-friendly guidance for creating more usable course content. Includes <em>Accessibility in 5</em> short videos, top tips, and ways to get assistance.</p><a href="https://citt.ufl.edu/resources/accessible-course-design/" rel="noopener noreferrer" target="_blank">Explore CITT resources (new tab)</a></div>
+<div class="card"><span class="pill">Practical course checklist</span><h3>UF Center for Teaching Excellence: Accessibility</h3><p>Step-by-step course improvements: headings, descriptive links, images, video, documents, and Canvas course materials.</p><a href="https://teach.ufl.edu/course-materials/accessibility/" rel="noopener noreferrer" target="_blank">Explore practical steps (new tab)</a></div>
+<div class="card"><span class="pill">Short video tutorials</span><h3>UFIT: Ally in Canvas</h3><p>Brief tutorials show common accessibility problems and how to fix them—including headings, image descriptions, and contrast.</p><a href="https://it.ufl.edu/training/offerings/items/ally-in-canvas.html" rel="noopener noreferrer" target="_blank">Watch Ally tutorials (new tab)</a></div>
+<div class="card"><span class="pill">Learn at your pace</span><h3>UFIT: Accessibility Fundamentals</h3><p>A UF self-paced introduction for instructors covering online learning, documents, PowerPoint, PDFs, video, and where to get help.</p><a href="https://it.ufl.edu/training/offerings/items/accessibility-fundamentals.html" rel="noopener noreferrer" target="_blank">Explore self-paced training (new tab)</a></div>
+<div class="card"><span class="pill">Find tools and support</span><h3>UF: Getting Started with Accessibility</h3><p>Find UF tools and support services, including Ally, UDOIT, document conversion, and accessibility consultations.</p><a href="https://accessibility.ufl.edu/faculty--staff/getting-started/" rel="noopener noreferrer" target="_blank">Find UF tools and support (new tab)</a></div>
+<div class="card"><span class="pill">For the next project</span><h3>UF CITT: Accessibility consultation</h3><p>For a faculty collaboration or more complex interactive project, CITT provides course-design and accessibility guidance.</p><a href="https://citt.ufl.edu/resources/accessible-course-design/" rel="noopener noreferrer" target="_blank">Find consultation options (new tab)</a></div>
+</div>
+<div class="card" style="margin-top:16px"><h3>Three quick checks for your HTML prototype</h3><ol><li><strong>Keyboard:</strong> Can you reach and activate each control using Tab, Shift+Tab, Enter, and Space? Is focus visible?</li><li><strong>Clarity:</strong> Are headings descriptive, instructions clear, and important information understandable without depending on color alone?</li><li><strong>Feedback:</strong> After interacting, can you perceive the result? For a fuller review, verify dynamic feedback with a screen reader.</li></ol>
+<p class="small">These are introductory checks, not a complete accessibility evaluation. Automated accessibility scores and AI-generated claims are not proof of WCAG conformance.</p></div>
+<details style="margin-top:16px"><summary>Need the technical standards? (Optional)</summary><p>For detailed reviews, consult the <a href="https://www.w3.org/TR/WCAG21/" rel="noopener noreferrer" target="_blank">official WCAG 2.1 standard (new tab)</a> and the <a href="https://www.w3.org/WAI/test-evaluate/preliminary/" rel="noopener noreferrer" target="_blank">W3C Easy Checks guide (new tab)</a>. UF's <a href="https://accessibility.ufl.edu/services/ada-and-title-ii-at-uf/" rel="noopener noreferrer" target="_blank">ADA and Title II accessibility page (new tab)</a> provides university context and training links.</p></details>
+<div class="note" style="margin-top:16px"><strong>Before sharing with faculty or students:</strong> Have a subject-matter expert review content and examples, perform accessibility and functional testing, confirm the hosting method works, and make sure AI disclosure describes the actual workflow.</div>
+</section></main></div><footer class="footer"><div class="shell"><p><strong>One resource. One prompt. One improvement.</strong> Keep people and learning at the center of AI-supported design.</p><p class="footer-links"><a href="https://view.genially.com/6aeb46084af174cc499a801d" rel="noopener noreferrer" target="_blank">View the symposium presentation (new tab)</a> <span aria-hidden="true">·</span> <a href="https://ajmacadangdang.github.io/sample/" rel="noopener noreferrer" target="_blank">Open the live faculty handout (new tab)</a></p><p class="small" style="margin-top:12px;color:#e3edf0">UF Instructional Design Symposium · November 2026</p></div></footer><script>
+function copyText(id, button){const el=document.getElementById(id);const text=el.innerText||el.textContent;let old=button.textContent;function done(){button.textContent='Copied!';setTimeout(()=>button.textContent=old,1800)}if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(text).then(done).catch(()=>fallback())}else fallback();function fallback(){let t=document.createElement('textarea');t.value=text;t.style.position='fixed';t.style.left='-9999px';document.body.appendChild(t);t.select();try{document.execCommand('copy');done()}catch(e){button.textContent='Select text to copy'}t.remove()}}
+
+const checks=[...document.querySelectorAll('.review-check')];function update(){let n=checks.filter(x=>x.checked).length;document.getElementById('check-progress').textContent=n+' of '+checks.length+' reviewed';document.getElementById('progress-bar').setAttribute('aria-valuenow',String(n));document.getElementById('progress-fill').style.width=(100*n/checks.length)+'%'}checks.forEach(c=>c.addEventListener('change',update));document.getElementById('reset-review').addEventListener('click',()=>{checks.forEach(c=>c.checked=false);update()});document.getElementById('download-review').addEventListener('click',()=>{let lines=['From Handout to Hands-On — Review Notes',''];checks.forEach(c=>{let label=c.closest('label').innerText.replace(/\s+/g,' ').trim();lines.push((c.checked?'[x] ':'[ ] ')+label)});let blob=new Blob([lines.join('\n')],{type:'text/plain'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='participant-review-checklist.txt';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)});
+
+// Evidence-based learning design checklist (separate from the workshop QA review).
+(function(){
+ const list=Array.from(document.querySelectorAll('.evidence-check'));
+ const progress=document.getElementById('evidence-progress');
+ const progressbar=document.getElementById('evidence-progressbar');
+ const fill=document.getElementById('evidence-fill');
+ function refresh(){const n=list.filter(c=>c.checked).length;
+   progress.textContent=n+' of '+list.length+' reviewed';
+   progressbar.setAttribute('aria-valuenow',String(n));
+   fill.style.width=(100*n/list.length)+'%';
+ }
+ list.forEach(c=>c.addEventListener('change',refresh));
+ document.getElementById('reset-evidence').addEventListener('click',()=>{list.forEach(c=>c.checked=false);refresh();});
+ document.getElementById('download-evidence').addEventListener('click',()=>{
+  const lines=['Interactive Learning Design Review — Evidence-Informed Principles','',
+   ...list.map(c=>{const t=c.closest('label').innerText.replace(/\s+/g,' ').trim();return (c.checked?'[x] ':'[ ] ')+t;}),
+   '', 'Human review is required before publishing or making claims about accessibility or learning effectiveness.'];
+  const blob=new Blob([lines.join('\n')],{type:'text/plain'});
+  const url=URL.createObjectURL(blob), a=document.createElement('a');a.href=url;
+  a.download='interactive-learning-design-review.txt';document.body.appendChild(a);a.click();a.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),1200);
+ });
+ refresh();
+})();
+</script><script>
+(function(){
+ const nav=document.getElementById('site-navigation');
+ const btn=nav.querySelector('.mobile-nav-toggle');
+ const links=nav.querySelectorAll('.sidebar-links a[href^="#"]');
+ function closeMenu(){nav.classList.remove('is-open');btn.setAttribute('aria-expanded','false');}
+ btn.addEventListener('click',()=>{const open=nav.classList.toggle('is-open');btn.setAttribute('aria-expanded',String(open));});
+ links.forEach(link=>link.addEventListener('click',()=>{if(window.innerWidth<=900)closeMenu();}));
+ const sections=[...document.querySelectorAll('main > section[id]')];
+ function setActive(){let current=sections[0]?.id;for(const sec of sections){if(sec.getBoundingClientRect().top<180)current=sec.id;}
+ links.forEach(link=>{if(link.getAttribute('href')==='#'+current)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current');});}
+ window.addEventListener('scroll',setActive,{passive:true});setActive();
+})();
+</script></body></html>
